@@ -1,0 +1,75 @@
+<?php 
+
+try {
+  $db = new PDO('sqlite:db.sqlite');
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+  $res = $db->exec(
+    "CREATE TABLE IF NOT EXISTS questions (
+      id INTEGER PRIMARY KEY AUTOINCREMENT, 
+      title TEXT, 
+      question TEXT, 
+      time DATETIME DEFAULT CURRENT_TIMESTAMP
+    )"
+  );
+  
+  $stmt = $db->prepare(
+    "INSERT INTO questions (title, question) 
+      VALUES (:title, :question)"
+  );
+  
+  // Bind values directly to statement variables
+  $stmt->bindValue(':title', 'Soru Başlığı', SQLITE3_TEXT);
+  $stmt->bindValue(':question', 'Soru içeriği', SQLITE3_TEXT);
+   
+  // Execute statement
+  $stmt->execute();
+  
+  $messages = $db->query("SELECT * FROM questions");
+  
+  // Garbage collect db
+  $db = null;
+} catch (PDOException $ex) {
+  echo $ex->getMessage();
+}
+
+?>
+
+---------------
+
+<?php 
+
+try {
+  $db = new PDO('sqlite:db.sqlite');
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+  $res = $db->exec(
+    "CREATE TABLE IF NOT EXISTS answers (
+      id INTEGER PRIMARY KEY AUTOINCREMENT, 
+      question_id INTEGER, 
+      answer TEXT, 
+      time DATETIME DEFAULT CURRENT_TIMESTAMP
+    )"
+  );
+  
+  $stmt = $db->prepare(
+    "INSERT INTO answers (question_id, answer) 
+      VALUES (:question_id, :answer)"
+  );
+  
+  // Bind values directly to statement variables
+  $stmt->bindValue(':question_id', Soru ID, SQLITE3_INTEGER);
+  $stmt->bindValue(':answer', 'Soru Cevabı', SQLITE3_TEXT);
+   
+  // Execute statement
+  $stmt->execute();
+  
+  $messages = $db->query("SELECT * FROM answers");
+  
+  // Garbage collect db
+  $db = null;
+} catch (PDOException $ex) {
+  echo $ex->getMessage();
+}
+
+?>

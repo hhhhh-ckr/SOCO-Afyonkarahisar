@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Carlito", sans-serif;
+}
+
+.bottom a, .top a {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #9b7850;
+  border: solid #000000 0.1rem;
+  border-radius: 1rem;
+  transition: 0.5s ease-in-out;
+}
+.bottom a .logolink, .top a .logolink {
+  margin: 0 1rem 0 1rem;
+}
+
+.content {
+  height: 100vh;
+  background-color: #959595;
+}
+
+.top {
+  padding: 1rem 2rem;
+  position: sticky;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #ca9d6a;
+  border-bottom: 1px solid #000000;
+}
+.top a .logo {
+  height: 3rem;
+  width: 3rem;
+}
+.top a h3 {
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.top a h3 i {
+  padding-right: 0.5rem;
+}
+.top a:hover {
+  background-color: #644d33;
+}
+
+.middle p, .middle .form-box .footer, .middle .form-box .answer, .middle .form-box .question, .middle .form-box .title, .msg1, .middle .form-box .msg, .middle .message-box .footer, .middle .message-box .answers, .middle .message-box .question, .middle .message-box .title {
+  padding: 1rem;
+  color: #ffffff;
+}
+
+.middle .form-box .footer h3, .middle .form-box .answer h3, .middle .form-box .question h3, .middle .form-box .title h3, .msg1 h3, .middle .form-box .msg h3, .middle .message-box .footer h3, .middle .message-box .answers h3, .middle .message-box .question h3, .middle .message-box .title h3 {
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: baseline;
+}
+.middle .form-box .footer h3 i, .middle .form-box .answer h3 i, .middle .form-box .question h3 i, .middle .form-box .title h3 i, .msg1 h3 i, .middle .form-box .msg h3 i, .middle .message-box .footer h3 i, .middle .message-box .answers h3 i, .middle .message-box .question h3 i, .middle .message-box .title h3 i {
+  padding-right: 0.5rem;
+}
+.middle .form-box .footer h3 img, .middle .form-box .answer h3 img, .middle .form-box .question h3 img, .middle .form-box .title h3 img, .msg1 h3 img, .middle .form-box .msg h3 img, .middle .message-box .footer h3 img, .middle .message-box .answers h3 img, .middle .message-box .question h3 img, .middle .message-box .title h3 img {
+  padding-left: 0.5rem;
+}
+.middle .form-box .footer h3 input, .middle .form-box .answer h3 input, .middle .form-box .question h3 input, .middle .form-box .title h3 input, .msg1 h3 input, .middle .form-box .msg h3 input, .middle .message-box .footer h3 input, .middle .message-box .answers h3 input, .middle .message-box .question h3 input, .middle .message-box .title h3 input {
+  width: 20vw;
+}
+.middle .form-box .footer h3 textarea, .middle .form-box .answer h3 textarea, .middle .form-box .question h3 textarea, .middle .form-box .title h3 textarea, .msg1 h3 textarea, .middle .form-box .msg h3 textarea, .middle .message-box .footer h3 textarea, .middle .message-box .answers h3 textarea, .middle .message-box .question h3 textarea, .middle .message-box .title h3 textarea {
+  height: 15vh;
+  width: 20vw;
+}
+
+.middle .message-box .question h5 {
+  padding: 0.5rem 1rem;
+  padding-bottom: 0;
+  display: flex;
+  align-items: baseline;
+}
+.middle .message-box .question h5 i {
+  padding-right: 0.5rem;
+}
+
+.middle .message-box .title {
+  background-color: #9b7850;
+}
+.middle .message-box .question {
+  background-color: #ca9d6a;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+.middle .message-box .answers {
+  background-color: #9b7850;
+}
+.middle .message-box .footer {
+  background-color: #9b7850;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+.middle .message-box .footer:hover {
+  background-color: #644d33;
+}
+
+.middle .form-box .msg {
+  background-color: #77B255;
+  border-bottom: 1px solid #000000;
+}
+
+.msg1 {
+  background-color: #DD2E44;
+  border-bottom: 1px solid #000000;
+}
+
+.middle .form-box .title {
+  background-color: #9b7850;
+}
+.middle .form-box .question {
+  max-width: 100%;
+  background-color: #ca9d6a;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+.middle .form-box .answer {
+  max-width: 100%;
+  background-color: #ca9d6a;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+.middle .form-box .footer {
+  background-color: #9b7850;
+  text-decoration: none;
+}
+
+.middle .form-box, .middle .message-box {
+  margin: 1rem;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-content: flex-start;
+  border: 1px solid #000000;
+  border-radius: 1rem;
+  line-break: auto;
+  overflow: hidden;
+}
+@media (max-width: 800px) {
+  .middle .form-box, .middle .message-box {
+    max-width: 90%;
+  }
+}
+@media (max-width: 1200px) {
+  .middle .form-box, .middle .message-box {
+    max-width: 45%;
+  }
+}
+
+.middle {
+  padding: 1rem 0 calc(73px + 1rem) 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: static;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .middle {
+    flex-direction: column;
+  }
+}
+.middle p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  background-color: #ca9d6a;
+  border-radius: 1rem;
+  border: 1px solid #000000;
+}
+
+.bottom {
+  padding: 1rem 2rem;
+  width: calc(100% - 4rem);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #ca9d6a;
+  border: none solid #000000;
+  border-top: 1px solid #000000;
+}
+.bottom a h3 {
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.bottom a h3 i {
+  padding-right: 0.5rem;
+}
+.bottom a h3 img {
+  padding-left: 0.5rem;
+}
+.bottom a:hover {
+  background-color: #644d33;
+}
+.bottom .bottom-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
